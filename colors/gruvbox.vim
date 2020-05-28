@@ -1413,6 +1413,10 @@ function! GruvboxHlsHideCursor()
   call s:HL('Cursor', s:none, s:none, s:inverse)
 endfunction
 
+" Set transparent background to allow vim to take the color of the underlying
+" program. For example, tmux, which can set the background to a different color
+" depending on the focus of the pane.
+highlight Normal guibg=NONE ctermbg=NONE
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
